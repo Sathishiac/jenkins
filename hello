@@ -1,9 +1,8 @@
 pipeline
 {
-    agent none
+    agent {label 'master'}
     stages{
       stage('echo command on slave'){
-                agent{label 'slave'}
                 steps{
                     echo 'Hello Slave'
                 }
