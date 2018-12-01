@@ -1,0 +1,17 @@
+pipeline
+{
+    agent none
+    stages{
+      stage('echo command on slave'){
+                agent{label 'slave'}
+                steps{
+                    echo 'Hello Slave'
+                }
+            }
+        }
+    post {
+        failure {
+            echo 'build failed'
+        }
+    }
+}
