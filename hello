@@ -8,9 +8,4 @@ pipeline
                 }
             }
         }
-    post {
-        failure {
-            echo 'build failed'
-        }
-    }
 }
